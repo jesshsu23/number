@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var guessTime: UILabel!
     @IBOutlet weak var inputNumber: UITextField!
     
-    var answer = 0 //答案初始值
+    var answer =  Int.random(in: 0...100) //答案
     var chance = 8 //生命初始值
     var upperBound = 100 //最大範圍提示
     var lowerBound = 0  //最小範圍提示
@@ -50,10 +50,6 @@ class ViewController: UIViewController {
         
     }
     
-    //提示玩家最近的範圍
-   func getBoundaryText() -> String {
-       return "(\(lowerBound)~\(upperBound))"
-   }
    
    
    //驗證
